@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info Cuaca</title>
+    <title>Informasi Cuaca </title>
     <style>
         body {
             font-family: "Poppins", sans-serif;
@@ -119,8 +119,8 @@
     <h1>🌤️ Info Cuaca Terkini</h1>
 
     <div class="search-box">
-        <input type="text" id="inputlokasi" placeholder="Cari kota, contoh: Yogyakarta">
-        <button id="btncari">cari</button>
+        <input type="text" id="inputLokasi" placeholder="Cari kota, contoh: Yogyakarta">
+        <button id="btnCari">Cari</button>
     </div>
 
     <div class="weather-card">
@@ -144,7 +144,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-     
+        // tetap pakai link API kamu
         let urlapi = "http://api.weatherapi.com/v1/current.json?key=066b6579c7674d9598d20731250710 &q=Yogyakarta&aqi=no";
 
         function getWeather(url) {
@@ -164,7 +164,7 @@
                     $("#ikon").attr("src", "https:" + data.current.condition.icon);
                 },
                 error: function (error) {
-                    alert("Lokasi tidak ditemukan!");
+                    alert("Terjadi kesalahan atau lokasi tidak ditemukan!");
                     console.log(error);
                 }
             });
