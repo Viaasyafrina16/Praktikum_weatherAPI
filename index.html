@@ -144,7 +144,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        // tetap pakai link API kamu
+     
         let urlapi = "http://api.weatherapi.com/v1/current.json?key=066b6579c7674d9598d20731250710 &q=Yogyakarta&aqi=no";
 
         function getWeather(url) {
@@ -164,7 +164,7 @@
                     $("#ikon").attr("src", "https:" + data.current.condition.icon);
                 },
                 error: function (error) {
-                    alert("Terjadi kesalahan atau lokasi tidak ditemukan!");
+                    alert("Lokasi tidak ditemukan!");
                     console.log(error);
                 }
             });
